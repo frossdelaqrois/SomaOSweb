@@ -11,7 +11,17 @@ export const navItems = [
   ["GitHub", "https://github.com/frossdelaqrois/SomaOSweb"],
 ] as const;
 
-export const gamingTools = ["Steam", "Heroic", "Lutris", "Wine", "Proton GE", "Gamemode", "MangoHUD", "OBS", "Discord"];
+export const gamingTools = [
+  { name: "Steam", href: "https://store.steampowered.com/" },
+  { name: "Heroic", href: "https://heroicgameslauncher.com/" },
+  { name: "Lutris", href: "https://lutris.net/" },
+  { name: "Wine", href: "https://www.winehq.org/" },
+  { name: "Proton GE", href: "https://github.com/GloriousEggroll/proton-ge-custom" },
+  { name: "Gamemode", href: "https://github.com/FeralInteractive/gamemode" },
+  { name: "MangoHUD", href: "https://github.com/flightlessmango/MangoHud" },
+  { name: "OBS", href: "https://obsproject.com/" },
+  { name: "Discord", href: "https://discord.com/" },
+];
 export const devTools = ["Unreal Engine", "Blender", "Godot", "VS Code", "Docker", "Podman", "Git", "Python", "AI"];
 export const roadmap = ["Alpha", "Internal", "Beta", "Public Preview", "1.0", "AI Assistant", "Immutable Edition", "Steam Deck Edition"];
 
