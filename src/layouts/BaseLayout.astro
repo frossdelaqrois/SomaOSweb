@@ -12,7 +12,7 @@ const {
   description = "A Fedora-based operating system built for gamers, game developers, AI creators, and performance-focused Linux users.",
 } = Astro.props;
 const canonical = new URL(Astro.url.pathname, Astro.site);
-const base = import.meta.env.BASE_URL;
+const base = import.meta.env.BASE_URL.endsWith("/") ? import.meta.env.BASE_URL : `${import.meta.env.BASE_URL}/`;
 const navHref = (href: string) => href.startsWith("http") ? href : `${base}${href.replace(/^\//, "")}`;
 ---
 

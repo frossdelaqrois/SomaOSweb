@@ -3,7 +3,7 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 import Section from "../components/Section.astro";
 import GlassCard from "../components/GlassCard.astro";
 import { devTools, gamingTools, roadmap, screenshots } from "../data";
-const base = import.meta.env.BASE_URL;
+const base = import.meta.env.BASE_URL.endsWith("/") ? import.meta.env.BASE_URL : `${import.meta.env.BASE_URL}/`;
 ---
 <BaseLayout title="SOMA OS | Gaming, Development, Performance">
   <section class="hero">
