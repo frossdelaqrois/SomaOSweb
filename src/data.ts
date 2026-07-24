@@ -7,7 +7,7 @@ export const gamingTools = [
   { name: "Gamemode", href: "https://github.com/FeralInteractive/gamemode" },
   { name: "MangoHUD", href: "https://github.com/flightlessmango/MangoHud" },
   { name: "OBS", href: "https://obsproject.com/" },
-  { name: "Discord", href: "https://discord.com/" },
+  { name: "Discord", href: "https://discord.com/channels/1017409737903575050/1530209252956831764" },
 ];
 export const devTools = ["Unreal Engine", "Blender", "Godot", "VS Code", "Docker", "Podman", "Git", "Python", "AI"];
 export const roadmap = ["Alpha", "Internal", "Beta", "Public Preview", "1.0", "AI Assistant", "Immutable Edition", "Steam Deck Edition"];
