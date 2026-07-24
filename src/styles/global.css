@@ -33,7 +33,7 @@ body::before {
   pointer-events: none;
   opacity: .08;
   background-image:
-    url("/SomaOSweb/assets/soma-logo.svg"),
+    url("/SomaOSweb/assets/soma-logo.png"),
     linear-gradient(120deg, transparent 0 45%, rgba(43, 140, 86, .12) 48% 52%, transparent 55% 100%);
   background-size: 420px, 120px 120px;
   background-position: center 80px, 0 0;
@@ -66,7 +66,7 @@ img { max-width: 100%; display: block; }
   backdrop-filter: blur(18px);
 }
 .brand { display: inline-flex; align-items: center; gap: .7rem; font-weight: 800; color: var(--cream); }
-.brand img { width: 42px; height: 42px; filter: drop-shadow(0 0 14px rgba(43,140,86,.45)); }
+.brand img { width: 42px; height: 42px; object-fit: cover; border-radius: 50%; filter: drop-shadow(0 0 14px rgba(43,140,86,.45)); }
 .brand span, h1, h2 { font-family: "Cinzel Decorative", Georgia, serif; letter-spacing: 0; }
 nav { display: flex; flex-wrap: wrap; justify-content: flex-end; gap: .35rem .8rem; font-size: .88rem; color: rgba(240,240,240,.76); }
 nav a { padding: .35rem .15rem; transition: color .2s ease, text-shadow .2s ease; }
@@ -79,7 +79,7 @@ nav a:hover, nav a:focus-visible { color: var(--gold); text-shadow: 0 0 18px rgb
   text-align: center;
 }
 .hero-inner { width: min(920px, 100%); transform-style: preserve-3d; }
-.hero-logo { width: clamp(148px, 18vw, 230px); margin: 0 auto 1.6rem; animation: pulse 5s ease-in-out infinite; }
+.hero-logo { width: clamp(240px, 34vw, 440px); margin: 0 auto 1.6rem; border-radius: 28px; animation: pulse 5s ease-in-out infinite; }
 h1 { margin: 0; color: var(--cream); font-size: clamp(4rem, 13vw, 9.5rem); line-height: .88; text-shadow: 0 0 42px rgba(43,140,86,.28); }
 .tagline { margin: 1.5rem auto 0; display: grid; gap: .2rem; color: var(--gold); font-size: clamp(1.8rem, 5vw, 4.2rem); font-weight: 800; line-height: 1; }
 .lede { max-width: 680px; margin: 1.7rem auto 0; color: rgba(240,240,240,.78); font-size: clamp(1.05rem, 2vw, 1.28rem); line-height: 1.7; }
@@ -174,7 +174,7 @@ p { line-height: 1.75; }
   border-top: 1px solid rgba(217,194,122,.16);
   background: rgba(5,5,5,.82);
 }
-.site-footer img { width: 58px; }
+.site-footer img { width: 58px; height: 58px; object-fit: cover; border-radius: 50%; }
 .site-footer p { margin: .25rem 0 0; color: rgba(240,240,240,.68); }
 .reveal { animation: rise .7s ease both; animation-timeline: view(); animation-range: entry 0% cover 28%; }
 @keyframes pulse { 0%, 100% { transform: scale(1); filter: drop-shadow(0 0 18px rgba(43,140,86,.48)); } 50% { transform: scale(1.035); filter: drop-shadow(0 0 34px rgba(217,194,122,.3)); } }
