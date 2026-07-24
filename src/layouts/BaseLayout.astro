@@ -1,6 +1,5 @@
 ---
 import "../styles/global.css";
-import { navItems } from "../data";
 
 interface Props {
   title?: string;
@@ -13,7 +12,6 @@ const {
 } = Astro.props;
 const canonical = new URL(Astro.url.pathname, Astro.site);
 const base = import.meta.env.BASE_URL.endsWith("/") ? import.meta.env.BASE_URL : `${import.meta.env.BASE_URL}/`;
-const navHref = (href: string) => href.startsWith("http") ? href : `${base}${href.replace(/^\//, "")}`;
 ---
 
 <!doctype html>
@@ -37,11 +35,6 @@ const navHref = (href: string) => href.startsWith("http") ? href : `${base}${hre
         <img src={`${base}assets/soma-logo.png`} alt="" />
         <span>SOMA OS</span>
       </a>
-      <nav aria-label="Primary navigation">
-        {navItems.map(([label, href]) => (
-          <a href={navHref(href)} target={href.startsWith("http") ? "_blank" : undefined} rel={href.startsWith("http") ? "noreferrer" : undefined}>{label}</a>
-        ))}
-      </nav>
     </header>
     <main>
       <slot />

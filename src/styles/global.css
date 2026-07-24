@@ -44,7 +44,7 @@ img { max-width: 100%; display: block; }
   z-index: 10;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
   gap: 1.5rem;
   padding: 1rem clamp(1rem, 4vw, 4rem);
   border-bottom: 1px solid rgba(217, 194, 122, .14);
@@ -54,9 +54,6 @@ img { max-width: 100%; display: block; }
 .brand { display: inline-flex; align-items: center; gap: .7rem; font-weight: 800; color: var(--cream); }
 .brand img { width: 42px; height: 42px; object-fit: cover; border-radius: 50%; filter: drop-shadow(0 0 14px rgba(43,140,86,.45)); }
 .brand span, h1, h2 { font-family: "Cinzel Decorative", Georgia, serif; letter-spacing: 0; }
-nav { display: flex; flex-wrap: wrap; justify-content: flex-end; gap: .35rem .8rem; font-size: .88rem; color: rgba(240,240,240,.76); }
-nav a { padding: .35rem .15rem; transition: color .2s ease, text-shadow .2s ease; }
-nav a:hover, nav a:focus-visible { color: var(--gold); text-shadow: 0 0 18px rgba(217,194,122,.42); }
 .hero {
   min-height: 88vh;
   display: grid;
@@ -170,8 +167,7 @@ p { line-height: 1.75; }
   *, *::before, *::after { animation-duration: .01ms !important; animation-iteration-count: 1 !important; scroll-behavior: auto !important; }
 }
 @media (max-width: 850px) {
-  .site-header { align-items: flex-start; flex-direction: column; }
-  nav { justify-content: flex-start; }
+  .site-header { align-items: center; }
   .grid-3, .split, .gallery-grid { grid-template-columns: 1fr; }
   .tool-grid, .feature-list { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .hero { min-height: auto; }
