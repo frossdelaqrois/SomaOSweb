@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 720">
+  <rect width="1200" height="720" rx="30" fill="#060806"/>
+  <rect x="70" y="70" width="1060" height="580" rx="24" fill="#0d0f0e" stroke="#2B8C56"/>
+  <circle cx="112" cy="111" r="10" fill="#D95F5F"/><circle cx="144" cy="111" r="10" fill="#D9C27A"/><circle cx="176" cy="111" r="10" fill="#2B8C56"/>
+  <g font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="28">
+    <text x="110" y="190" fill="#D9C27A">soma@os</text><text x="245" y="190" fill="#F8F3D6"> ~ $ soma-ready --gaming --dev --ai</text>
+    <text x="110" y="252" fill="#2B8C56">✓ Fedora base synced</text>
+    <text x="110" y="314" fill="#2B8C56">✓ Proton GE configured</text>
+    <text x="110" y="376" fill="#2B8C56">✓ Unreal toolchain detected</text>
+    <text x="110" y="438" fill="#2B8C56">✓ AI creator stack online</text>
+    <text x="110" y="530" fill="#F8F3D6">Performance profile:</text><text x="390" y="530" fill="#D9C27A">low-latency</text>
+  </g>
+</svg>

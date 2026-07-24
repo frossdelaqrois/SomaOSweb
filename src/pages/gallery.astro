@@ -1,0 +1,11 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import Section from "../components/Section.astro";
+import { screenshots } from "../data";
+const base = import.meta.env.BASE_URL;
+---
+<BaseLayout title="Gallery | SOMA OS">
+  <Section eyebrow="Gallery" title="Screens and visual direction.">
+    <div class="gallery-grid">{screenshots.map((shot) => <img src={`${base}${shot.src}`} alt={shot.alt} />)}</div>
+  </Section>
+</BaseLayout>

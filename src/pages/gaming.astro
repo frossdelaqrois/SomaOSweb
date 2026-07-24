@@ -1,0 +1,14 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import Section from "../components/Section.astro";
+import { gamingTools } from "../data";
+const base = import.meta.env.BASE_URL;
+---
+<BaseLayout title="Gaming | SOMA OS">
+  <Section eyebrow="Gaming" title="Launch, tune, stream, and measure.">
+    <div class="tool-grid">{gamingTools.map((tool) => <div class="tool-chip">{tool}</div>)}</div>
+  </Section>
+  <Section eyebrow="Performance" title="Built around low-friction Linux gaming.">
+    <div class="showcase"><img src={`${base}assets/screenshot-desktop.svg`} alt="Gaming desktop preview" /></div>
+  </Section>
+</BaseLayout>

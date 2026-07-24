@@ -1,0 +1,17 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import Section from "../components/Section.astro";
+import GlassCard from "../components/GlassCard.astro";
+---
+<BaseLayout title="Features | SOMA OS">
+  <Section eyebrow="Features" title="Fedora strength with a SOMA workflow.">
+    <div class="grid-3">
+      <GlassCard title="Performance Defaults" text="Low-latency tuning, lean startup behavior, and sensible GPU-first choices." />
+      <GlassCard title="Creator Stack" text="Blender, Unreal, Godot, Python, containers, and AI tooling are first-class citizens." />
+      <GlassCard title="Game Ready" text="Steam, Proton GE, Wine, MangoHUD, Gamemode, streaming, and voice apps fit together cleanly." />
+      <GlassCard title="Package Freedom" text="RPM and Flatpak support keep Fedora compatibility at the center." />
+      <GlassCard title="Polished Desktop" text="A dark Celtic visual identity with premium glass panels and restrained motion." />
+      <GlassCard title="Future Editions" text="Immutable, Steam Deck, and AI assistant editions are planned as the project matures." />
+    </div>
+  </Section>
+</BaseLayout>

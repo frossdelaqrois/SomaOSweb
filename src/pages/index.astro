@@ -1,0 +1,72 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import Section from "../components/Section.astro";
+import GlassCard from "../components/GlassCard.astro";
+import { devTools, gamingTools, roadmap, screenshots } from "../data";
+const base = import.meta.env.BASE_URL;
+---
+<BaseLayout title="SOMA OS | Gaming, Development, Performance">
+  <section class="hero">
+    <div class="hero-inner">
+      <img class="hero-logo" src={`${base}assets/soma-logo.svg`} alt="SOMA OS Celtic triquetra logo" />
+      <h1>SOMA OS</h1>
+      <div class="tagline"><span>Gaming.</span><span>Development.</span><span>Performance.</span></div>
+      <p class="lede">A Fedora-based operating system built for gamers, game developers and AI creators.</p>
+      <div class="actions">
+        <a class="button" href={`${base}downloads`}>Download</a>
+        <a class="button secondary" href="https://github.com/frossdelaqrois/SomaOSweb" target="_blank" rel="noreferrer">GitHub</a>
+      </div>
+    </div>
+  </section>
+
+  <Section eyebrow="Why SOMA" title="An OS tuned for play, build, and creation." class="why">
+    <div class="grid-3">
+      <GlassCard icon="🎮" title="Gaming" text="Built around Fedora with performance-first defaults." />
+      <GlassCard icon="🛠" title="Development" text="Unreal Engine, Godot, Blender, VS Code, AI tooling." />
+      <GlassCard icon="⚡" title="Performance" text="Low latency. Fast boot. Minimal overhead." />
+    </div>
+  </Section>
+
+  <Section eyebrow="Preview" title="Dark, focused, and ready to work.">
+    <div class="showcase"><img src={`${base}${screenshots[0].src}`} alt={screenshots[0].alt} /></div>
+  </Section>
+
+  <Section eyebrow="Gaming" title="Gaming features that feel native.">
+    <div class="tool-grid">{gamingTools.map((tool) => <a class="tool-chip" href={`${base}gaming`}>{tool}</a>)}</div>
+  </Section>
+
+  <Section eyebrow="Developer Experience" title="Creator tooling without the scavenger hunt.">
+    <div class="split">
+      <ul class="feature-list">{devTools.map((tool) => <li>{tool}</li>)}</ul>
+      <div class="showcase"><img src={`${base}assets/screenshot-studio.svg`} alt="SOMA OS studio workflow preview" /></div>
+    </div>
+  </Section>
+
+  <Section eyebrow="Compatibility" title="Powered by Fedora.">
+    <div class="split">
+      <div class="fedora-mark">f</div>
+      <ul class="feature-list">
+        <li>Rolling improvements</li>
+        <li>RPM packages</li>
+        <li>Flatpak support</li>
+        <li>Immutable edition planned</li>
+      </ul>
+    </div>
+  </Section>
+
+  <Section eyebrow="Roadmap" title="From alpha to dedicated editions.">
+    <ol class="timeline">{roadmap.map((item, index) => <li class={index < 2 ? "done" : ""}>{item}</li>)}</ol>
+  </Section>
+
+  <Section eyebrow="Gallery" title="A consistent visual language across the system.">
+    <div class="gallery-grid">{screenshots.map((shot) => <img src={`${base}${shot.src}`} alt={shot.alt} />)}</div>
+  </Section>
+
+  <Section eyebrow="Community" title="Build SOMA OS with us.">
+    <div class="grid-3">
+      <GlassCard title="GitHub" text="Follow development, file issues, and contribute to the website." />
+      <GlassCard title="Discord" text="Chat with gamers, developers, and creators shaping the distro." />
+      <GlassCard title="Matrix" text="Open community rooms for discussion and support." />
+    </div>
+  </Section>
+</BaseLayout>

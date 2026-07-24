@@ -1,0 +1,14 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import Section from "../components/Section.astro";
+import GlassCard from "../components/GlassCard.astro";
+---
+<BaseLayout title="Documentation | SOMA OS">
+  <Section eyebrow="Documentation" title="Clear docs for installing, tuning, and creating.">
+    <div class="grid-3">
+      <GlassCard title="Install Guide" text="Hardware notes, image writing, first boot, and post-install checks." />
+      <GlassCard title="Gaming Setup" text="Drivers, launchers, Proton GE, performance overlays, and capture settings." />
+      <GlassCard title="Developer Setup" text="Unreal, Godot, Blender, containers, Git, Python, and AI workflows." />
+    </div>
+  </Section>
+</BaseLayout>

@@ -1,0 +1,58 @@
+---
+import "../styles/global.css";
+import { navItems } from "../data";
+
+interface Props {
+  title?: string;
+  description?: string;
+}
+
+const {
+  title = "SOMA OS",
+  description = "A Fedora-based operating system built for gamers, game developers, AI creators, and performance-focused Linux users.",
+} = Astro.props;
+const canonical = new URL(Astro.url.pathname, Astro.site);
+const base = import.meta.env.BASE_URL;
+const navHref = (href: string) => href.startsWith("http") ? href : `${base}${href.replace(/^\//, "")}`;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content={description} />
+    <meta name="theme-color" content="#050505" />
+    <link rel="canonical" href={canonical} />
+    <link rel="icon" href={`${base}assets/soma-logo.svg`} type="image/svg+xml" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700;900&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <title>{title}</title>
+  </head>
+  <body>
+    <div class="ambient" aria-hidden="true"></div>
+    <header class="site-header">
+      <a class="brand" href={base} aria-label="SOMA OS home">
+        <img src={`${base}assets/soma-logo.svg`} alt="" />
+        <span>SOMA OS</span>
+      </a>
+      <nav aria-label="Primary navigation">
+        {navItems.map(([label, href]) => (
+          <a href={navHref(href)} target={href.startsWith("http") ? "_blank" : undefined} rel={href.startsWith("http") ? "noreferrer" : undefined}>{label}</a>
+        ))}
+      </nav>
+    </header>
+    <main>
+      <slot />
+    </main>
+    <footer class="site-footer">
+      <img src={`${base}assets/soma-logo.svg`} alt="" />
+      <div>
+        <strong>SOMA OS</strong>
+        <p>Built with Fedora. Made for gamers. Made for developers. Made for creators.</p>
+      </div>
+      <a href="https://github.com/frossdelaqrois/SomaOSweb" target="_blank" rel="noreferrer">GitHub</a>
+    </footer>
+  </body>
+</html>
