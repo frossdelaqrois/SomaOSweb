@@ -82,7 +82,9 @@ h1 { margin: 0; color: var(--cream); font-size: clamp(4rem, 13vw, 9.5rem); line-
   transition: transform .2s ease, box-shadow .2s ease, border-color .2s ease;
 }
 .button.secondary { border-color: rgba(43, 140, 86, .64); background: rgba(17,17,17,.58); }
+.button.inert { cursor: default; opacity: .76; }
 .button:hover { transform: translateY(-3px); border-color: var(--gold); box-shadow: 0 0 34px rgba(217,194,122,.24); }
+.button.inert:hover { transform: none; border-color: rgba(217, 194, 122, .54); box-shadow: 0 0 26px rgba(43,140,86,.22); }
 .section { width: min(1160px, calc(100% - 2rem)); margin: 0 auto; padding: 5.5rem 0; }
 .section-heading { max-width: 760px; margin-bottom: 2rem; }
 .section-heading.center { margin-inline: auto; text-align: center; }

@@ -1,16 +1,3 @@
-export const navItems = [
-  ["Home", "/"],
-  ["Features", "/features"],
-  ["Downloads", "/downloads"],
-  ["Documentation", "/documentation"],
-  ["Gaming", "/gaming"],
-  ["Development", "/development"],
-  ["Gallery", "/gallery"],
-  ["Roadmap", "/roadmap"],
-  ["Community", "/community"],
-  ["GitHub", "https://github.com/frossdelaqrois/SomaOSweb"],
-] as const;
-
 export const gamingTools = [
   { name: "Steam", href: "https://store.steampowered.com/" },
   { name: "Heroic", href: "https://heroicgameslauncher.com/" },
